@@ -14,7 +14,7 @@ class LatestAiDevelopment():
 		return Agent(
 			config=self.agents_config['researcher'],
 			verbose=True,
-			tools=[SerperDevTool()]
+			# tools=[SerperDevTool()]
 		)
 
 	@agent
@@ -23,6 +23,15 @@ class LatestAiDevelopment():
 			config=self.agents_config['reporting_analyst'],
 			verbose=True
 		)
+	@agent
+	def resoure_asset(self) -> Agent:
+		return Agent(
+			config=self.agents_config['resoure_asset'],
+			# tools=[SerperDevTool()],
+			verbose=True
+		)
+	
+
 	@task
 	def research_task(self) -> Task:
 		return Task(
@@ -33,8 +42,15 @@ class LatestAiDevelopment():
 	def reporting_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['reporting_task'],
+		)
+	@task
+	def resoure_asset_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['resoure_asset_task'],
 			output_file='report.md'
 		)
+	
+
 
 	@crew
 	def crew(self) -> Crew:

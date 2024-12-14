@@ -1,20 +1,35 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2024.
+    search only 2 websites
+    Use a Web browser tool and understand the industry and segment the {topic} is working in 
+    (e.g., Automotive, Manufacturing, Finance, Retail, Healthcare, etc.).
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    
+    Identify the {topic}’s key offerings and strategic focus areas (e.g., operations, supply chain, customer experience, etc.).
+    A vision and product information on the industry should be fine as well.
+    search only 2 websites
   agent: researcher
+
 
 reporting_task:
   description: >
-    Based on the industry conducted, analyze industry trends and standards within the 
-    {topic}’s sector related to AI, ML, and automation.
-    Propose relevant use cases where the company can leverage GenAI, LLMs, and ML technologies to improve their processes, 
-    enhance customer satisfaction, and boost operational efficiency.
+    Based on the industry conducted, analyze industry trends and standards within the {topic}’s 
+    sector related to AI, ML, and automation.
   expected_output: >
-    Collect the above use cases generated and search for relevant datasets on platforms like Kaggle, HuggingFace, and GitHub.
-    Save the resource links fetched in a text or markdown file.
-    Formatted as markdown without '```'
+    Propose relevant use cases where the company can leverage GenAI, LLMs, and ML technologies to improve their 
+    processes, enhance customer satisfaction, and boost operational efficiency.
+    
   agent: reporting_analyst
+
+resoure_asset_task:
+  description: >
+    Collect the above use cases generated and search 
+    for relevant datasets on platforms like Kaggle, HuggingFace, and GitHub.
+    search only 2 websites
+  expected_output:
+    search only 2 websites
+    Collect the above use cases generated and 
+    search for relevant datasets on platforms like Kaggle, HuggingFace, and GitHub.
+    Save the resource links fetched in a text or markdown file.]
+    Formatted as markdown without '```'
+  agent: resoure_asset
